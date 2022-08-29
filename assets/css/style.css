@@ -75,3 +75,42 @@ section:hover .blue {
 .container:hover .text {
     top: 0;
 }
+
+.balls {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 1200px;
+    border: 2px orangered solid;
+}
+
+.big {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    transition: left 2s;
+}
+
+.small {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(40, 106, 144);
+    border-radius: 50%;
+    transition: left 3s;
+    transition-delay: 2s;
+}
+
+.big:active {
+    left: 190px;
+}
+
+.big:active + .small {
+    left: 1100px;
+}
