@@ -1,0 +1,77 @@
+.expand {
+    margin: 10rem 3rem;
+    width: 10%;
+    height: 10vh;
+    background-color: orangered;
+    transition: 1s ease-in;
+}
+
+.expand:hover {
+    cursor: pointer;
+    width: 80%;
+}
+
+section {
+    position: relative;
+    width: 90%;
+    height: 30vh;
+}
+
+.red {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: red;
+    left: 0;
+    top: 0;
+    transition: left 3s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.blue {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: blue;
+    left: 0;
+    bottom: 0;
+    transition: left 3s;
+    transition-timing-function: cubic-bezier(0.99, -0.01, 1, 0.1);
+}
+
+section:hover .red {
+    left: 90%;
+    top: 0;
+}
+
+section:hover .blue {
+    left: 90%;
+    bottom: 0;
+}
+
+.container {
+    position: relative;
+    margin: 2rem auto;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.text {
+    display: flex;
+    background-color: black;
+    opacity: 0.5;
+    color: rgb(245, 68, 4);
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    height: 400px;
+    width: 300px;
+    transition: top 0.5s ease-in;
+}
+
+.container:hover .text {
+    top: 0;
+}
